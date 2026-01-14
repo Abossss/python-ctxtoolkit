@@ -1,0 +1,22 @@
+# 包含项目根目录下的所有必要文件
+include README.md
+include README_CN.md
+include LICENSE
+include setup.py
+include MANIFEST.in
+include CHANGELOG.md
+include API_DOCUMENTATION.md
+include ctxtoolkit.png
+
+# 如果有pyproject.toml文件，也包含进来
+# include pyproject.toml
+
+# 包含包目录下的所有.py文件
+recursive-include ctxtoolkit *.py
+
+# 包含类型提示文件
+include ctxtoolkit/py.typed
+
+# 排除测试文件和__pycache__目录
+exclude ctxtoolkit/__pycache__/*
+exclude tests/*
